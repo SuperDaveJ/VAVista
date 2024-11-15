@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>VA GUI</title>
+<style type="text/css">
+body {
+	margin: 0;
+	outline: none;
+}
+
+#container {
+	position: relative;
+	width: 960px;
+	height: 580px;
+	background: #FFF url("sysimages/bkg_menu.png") no-repeat 0 0;
+	font: normal 14px Arial, Helvetica, sans-serif;
+	color: #000;
+	}
+
+/* MASTHEAD ELEMENTS */
+
+#masthead {
+	position: relative;
+	height: 57px;
+	}
+	
+#masthead_title { 
+	position: absolute; 
+	top: 16px; 
+	left: 154px; 
+	height: 29px; 
+	width: 346px; 
+	background: transparent url("sysimages/masthead_title.png") no-repeat 0 0; 
+}
+#masthead_title span {position:absolute; left:-2000px; }
+
+h1 { font-weight: bold; color: #cc001e; padding: 0px; margin: 0px; font-size: 26px; }
+h2 { font-weight: bold; color: #999; padding: 0px; margin: 25px 0 0 0; font-size: 18px; }
+p { margin: 0px; padding: 8px 0px 0px 0px; line-height: 1.3; }
+
+/* COURSE MENU */
+ul.course_menu {  }
+ul.course_menu li { list-style-image: url("sysimages/bullet_menu_unchecked.png"); font-weight: bold; font-size: 18px; padding:0 0 8px 8px;}
+ul.course_menu li.completed { list-style-image: url("sysimages/bullet_menu_checked.png"); color: #999; }
+ul a:link, ul a:visited, ul a:hover, ul a:active { color: #000; text-decoration: none; }
+
+#exit {
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 46px;
+	background: transparent url(sysimages/nav_buttons.png) no-repeat top left;
+	left: 874px;
+	top: 467px;
+	/*cursor: pointer;*/
+}
+#exit:hover { background-position: 0 -46px; }
+#exit span { position:absolute; left:-2000px; }
+
+#prompt {
+	position: absolute;
+	top:479px;
+	width:100%;
+	height:20px;
+	text-align:center;
+	color: #cc001e;
+	font-weight: bold;
+	font-style: italic;
+}
+
+</style>
+
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#exit").on("click", exitConfirm);
+	//Update menu item checkmarks
+	for (var i=1; i<=parent.nModules; ++i) {
+		if (parent.getModuleStatus(i) === 2) {
+		  //the value of n is "1-indexed", meaning that the counting starts at 1.
+		  $("ul.course_menu li:nth-child(" + i + ")").addClass("completed");
+		}
+	}
+});
+
+function exitConfirm(){
+	if (confirm("Do you wish to exit the course?")==true) {
+		parent.exitCourse();
+		return false;
+	}
+}
+
+</script>
+
+</head>
+
+<body>
+<div id="container">
+    <div id="masthead">
+        <!-- NOTE: ADD class "has_submenu" below if breadcrumb navigation is available -->
+        <div id="masthead_title"><span>VistA Programming Standards</span></div>
+  </div><!-- CLOSE MASTHEAD -->
+    
+  <div style="position:absolute; left:220px; top:100px; width:600px; height:250px;">
+    <h1>VistA Programming Standards Main Menu</h1>
+    
+    <h2>Select the module of your choice:</h2>
+    
+    <ul class="course_menu">
+        <li><a href="module1/00001.html">VistA Programming Standards Course Introduction</a></li>
+        <li><a href="module2/01001.html">Vista Architecture and Background</a></li>
+        <li><a href="module3/02001.html">General Programming Standards and Conventions</a></li>
+        <li><a href="module4/03001.html">M Language Programming Standards and Conventions</a></li>
+        <li><a href="module5/04001.html">Validation Tools</a></li>
+    </ul>
+  </div>
+
+  <div id="prompt">Select the module of your choice</div>
+  
+  <a id="exit" href="javascript:;" title="Exit"><span>Exit</span></a>
+  
+</div><!-- CLOSE CONTAINER -->
+
+</body>
+</html>

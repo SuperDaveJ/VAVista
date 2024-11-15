@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background: #141414 url("../sysimages/bkg_popup.png") repeat-x;
+	font: normal 14px Arial, Helvetica, sans-serif;
+	color:#fff;
+}
+
+h1 { font-weight: bold; color: #fff; font-size: 20px; }
+h2 { font-weight: bold; color: #fff; padding:10px 0; margin:0px; font-size: 16px; }
+
+p { padding:5px 8px 5px 0; }
+
+li { margin-left:30px; padding-right:8px; padding-bottom:5px; }
+ul ul { list-style-type:circle; margin-top:7px; margin-bottom:5px; }
+
+a:link, a:visited, a:hover, a:active { font-weight: bold; color: #cc001e; text-decoration: underline; }
+a:hover { text-decoration: underline; }
+
+#title {
+	position:relative;
+	width:100%;
+	padding:15px 0;
+	text-align:center;
+}
+
+#content {
+	position:relative;
+	top:0px;
+	width:96%;
+	height:435px;
+	margin:0 15px;
+	text-align:left;
+	overflow:auto;
+	scrollbar-face-color:#666;
+	scrollbar-arrow-color:#fff;
+	scrollbar-track-color:#999;
+	scrollbar-highlight-color:#bbb;	/*left edge*/
+	scrollbar-shadow-color:#333;
+	scrollbar-darkshadow-color:#000;	/* right edge */
+	scrollbar-3dlight-color:#222;
+}
+
+#content.small {
+	height:350px;
+}
+
+#content.large {
+	height:480px;
+}
+
+#close { position:relative; margin:10px 30px 0 0; width:97%; text-align:right;}

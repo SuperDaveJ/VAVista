@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>VistA Programming Standards</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" type="text/css" href="../styles/va_styles.css" />
+<script type="text/javascript" src="../scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../scripts/audioControls.js"></script>
+<script type="text/javascript" src="../scripts/va_content.js"></script>
+<!-- TemplateBeginEditable name="head" -->
+<script type="text/javascript">
+    nextURL = "testPage2.html";
+    backURL = "";
+    //enableNext = true;
+    //enableBack = true;
+</script>
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<a href="#fullpage_content" class="offScreen" title="Skip to content">Skip to content</a>
+<div id="container">
+  <div id="masthead">
+        <!-- NOTE: ADD class "has_submenu" below if breadcrumb navigation is available -->
+        <div id="masthead_title" class="has_submenu"><span>VistA Programming Standards</span></div>
+        <div class="breadcrumb_nav">
+<!-- TemplateBeginEditable name="Titles" -->
+Module #<span class="divider">|</span><span class="module_title">Course Introduction</span>
+<!-- TemplateEndEditable -->
+        </div><!-- CLOSE MASTHEAD_BREADCRUMB_NAV -->
+    </div><!-- CLOSE MASTHEAD -->
+    
+    <div id="pgNumText"><span class="offScreen">Page </span>
+      <!-- TemplateBeginEditable name="PageNumber" --># of ##<!-- TemplateEndEditable -->
+    </div>
+
+    <div id="content_area">
+        <div id="fullpage_content">
+<!-- TemplateBeginEditable name="ContentArea" -->
+<div class="left_text">
+<h1>VistA Programming Standards</h1>
+
+<p>ContentArea</p>
+
+</div>
+
+<div class="image_box">This space for images</div>
+
+<div id="prompt">Select Next to continue.</div>
+            
+<!-- TemplateEndEditable -->
+        
+        </div><!-- CLOSE FULLPAGE_CONTENT -->
+  </div><!-- CLOSE CONTENT_AREA -->
+    
+    <div id="footer">
+        <div id="navbar">
+            <a id="audio" href="#" title="Audio"><span>Audio</span></a>
+            <a id="cc" href="#" title="Closed Captioning"><span>Closed Captioning</span></a>
+            <a id="next" href="#" title="Next"><span>Next</span></a>
+            <a id="back" href="#" title="Back"><span>Back</span></a>
+            <a id="resources" href="#" title="Resources"><span>Resources</span></a>
+            <a id="didyouknow" href="#" title="Did You Know?"><span>Did You Know?</span></a>
+            <a id="menu" href="#" title="Menu"><span>Menu</span></a>
+            <a id="exit" href="#" title="Exit"><span>Exit</span></a>
+            <div id="divider"><span>|</span></div>
+        </div><!-- CLOSE MENU -->
+    </div><!-- CLOSE FOOTER -->
+    
+</div><!-- CLOSE CONTAINER -->
+<!-- TemplateBeginEditable name="BottomCodeArea" -->
+
+<!-- TemplateEndEditable -->
+</body>
+</html>
